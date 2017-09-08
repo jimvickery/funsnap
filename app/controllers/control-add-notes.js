@@ -11,7 +11,7 @@ app.controller("addNoteCtrl", function($scope, notesFactory, $location, userFact
 
 	$scope.note = {
 		createdBy: "",
-		createdDate: "",
+		createdDate: $scope.value = new Date().toString().split("T")[0],
 		note: "",
 		uid: user
 	};

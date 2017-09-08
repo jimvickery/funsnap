@@ -8,6 +8,7 @@ app.controller("noteCtrl", function($scope, notesFactory, userFactory){
 	$scope.notes = [];
 	let use = userFactory.getCurrentUser();
 
+	
     const showAllnotes = function(){
     	notesFactory.getAllNotes()
     	.then((notes) => {
