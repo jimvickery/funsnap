@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes App</title>
+    <link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+<!-- app connection -->
+   <div ng-app="NotesApp">
+        <div ng-include="'partials/navbar.html'"></div>
+    	<div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 main-container">
+                    <div ng-view>
+                        
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
+
+    <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/values/fb-creds.js"></script>
+
+    <!-- factories -->
+    <script src="./app/factory/factory-notes.js"></script>
+    <script src="./app/factory/factory-user.js"></script>
+    
+    
+
+    <!-- controllers -->
+    
+    <script src="./app/controllers/control-add-notes.js"></script>
+    <script src="./app/controllers/control-detail-notes.js"></script>
+    <script src="./app/controllers/control-edit-notes.js"></script>
+    <script src="./app/controllers/control-navbar.js"></script>
+    <script src="./app/controllers/control-notes.js"></script>
+    <script src="./app/controllers/control-user.js"></script>
+    
+    
+
+    
+    
+
+
+
+
+
+
+</body>
+</html>
