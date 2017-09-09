@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<div ng-repeat="item in notes" ng-class-odd="'odd'" ng-class-even="'even'">
+<div ng-repeat="item in notes | filter: searchText.search"  ng-class-odd="'odd'" ng-class-even="'even'">
 <!-- Loops over notes array -->
         <div class="panel-body">
              <div class="col-xs-2">{{item.createdBy}}</div>

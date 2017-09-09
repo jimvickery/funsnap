@@ -2,8 +2,9 @@
 console.log('inside of control-navbar.js');
 
 
-app.controller("navCtrl", function($scope, $window, userFactory){
+app.controller("navCtrl", function($scope, $window, userFactory, filterFactory){
 
+  $scope.searchText = filterFactory;
 	$scope.isLoggedIn = false;
 
 	$scope.logout = () => {

@@ -3,12 +3,14 @@
 console.log('inside of control-notes.js');
 
 
-app.controller("noteCtrl", function($scope, notesFactory, userFactory){
+app.controller("noteCtrl", function($scope, notesFactory, userFactory, filterFactory, $rootScope){
 
 	$scope.notes = [];
-	let use = userFactory.getCurrentUser();
+	let user = userFactory.getCurrentUser();
+	$rootScope.showSearch = true; 
+	$scope.searchText = filterFactory;
 
-	
+
     const showAllnotes = function(){
     	notesFactory.getAllNotes()
     	.then((notes) => {

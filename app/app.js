@@ -63,3 +63,7 @@ app.run(($location, FBCreds) => {
 
 	firebase.initializeApp(authConfig);
 });
+
+app.run(function($rootScope) {
+	$rootScope.showSearch = false;
+});
