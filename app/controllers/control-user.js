@@ -48,8 +48,8 @@ app.controller("userCtrl", function ($scope, $window, userFactory, $location) {
             userFactory.authWithProvider()
             .then( (result) =>{
                 let user = result.user.uid;
-                $location.path("/notes");
-                $scope.apply();
+                $location.path("/note-list");
+                $scope.$apply();
             }).catch( (error) => {
                 console.log("error with google login");
                 let errorCode = error.code;

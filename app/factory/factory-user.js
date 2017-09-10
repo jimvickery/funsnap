@@ -26,14 +26,14 @@ app.factory("userFactory", function($q, $http){
     };
 
 
-    const loginGoogle = function(userObj){
-        return firebase.auth.signInWithEmailAndPassword(userObj.email, userObj.password)
-        .catch(function(error) {
-            let errorCode = error.code;
-            let errorMessage = error.message;
-            console.log('"error', errorCode, errorMessage);
-    });
- };
+//     const loginGoogle = function(userObj){
+//         return firebase.auth.signInWithEmailAndPassword(userObj.email, userObj.password)
+//         .catch(function(error) {
+//             let errorCode = error.code;
+//             let errorMessage = error.message;
+//             console.log('"error', errorCode, errorMessage);
+//     });
+//  };
 
     const logIn = function(userObj){
         return firebase.auth().signInWithEmailAndPassword(userObj.email, userObj.password)
@@ -69,6 +69,6 @@ app.factory("userFactory", function($q, $http){
         return firebase.auth().signInWithPopup(provider);
     };
 
-    return {getCurrentUser, loginGoogle, logIn, logOut, register, isAuthenticated, authWithProvider};
+    return {getCurrentUser, logIn, logOut, register, isAuthenticated, authWithProvider};
 
 });

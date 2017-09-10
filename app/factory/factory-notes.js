@@ -7,9 +7,9 @@ app.factory("notesFactory", function($q, $http, FBCreds){
 
     const getAllNotes = function(user){
         let notes = [];
-        console.log("url ", `${FBCreds.databaseURL}/notes.json?orderBy="uid"&eaulTo="${user}"`);
+        console.log("url ", `${FBCreds.databaseURL}/notes.json?orderBy="uid"&equalTo="${user}"`);
         return $q( (resolve, reject) => {
-            $http.get(`${FBCreds.databaseURL}/notes.json?orderBy="uid"&eaulTo="${user}"`)
+            $http.get(`${FBCreds.databaseURL}/notes.json?orderBy="uid"&equalTo="${user}"`)
             .then((itemObject) => {
                 let itemCollection = itemObject.data;
                 console.log("itemCollection", itemCollection);

@@ -24,30 +24,31 @@ app.config(($routeProvider) => {
 	.when('/', {
 		templateUrl: 'partials/note.html',
 		controller: 'noteCtrl',
-		// resolve: {isAuth}
+		resolve: {isAuth}
 	})
 	.when('/login', {
 		templateUrl: 'partials/user.html',
-		controller: 'userCtrl'
+		controller: 'userCtrl',
+	})
+	.when('/note/newNote', {
+		templateUrl: 'partials/form.html',
+		controller: 'addNoteCtrl',
+		resolve: {isAuth}
 	})
 	.when('/note-list', {
 		templateUrl: 'partials/note.html',
 		controller: 'noteCtrl',
-		// resolve: {isAuth}
-	})
-	.when('/note/newNote', {
-		templateUrl: 'partials/form.html',
-		controller: 'addNoteCtrl'
+		resolve: {isAuth}
 	})
 	.when('/note/:itemId', {
 		templateUrl: 'partials/details.html',
 		controller: 'detailNoteCtrl',
-		// resolve: {isAuth}
+		resolve: {isAuth}
 	})
 	.when('/note/:itemId/edit', {
 		templateUrl: 'partials/form.html',
 		controller: 'editNoteCtrl',
-		// resolve: {isAuth}
+		resolve: {isAuth}
     })
     .otherwise('/');
 });
@@ -62,8 +63,9 @@ app.run(($location, FBCreds) => {
 	};
 
 	firebase.initializeApp(authConfig);
-});
+
 
 app.run(function($rootScope) {
 	$rootScope.showSearch = false;
+	});
 });

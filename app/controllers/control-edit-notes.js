@@ -6,7 +6,7 @@ console.log('inside of control-edit.js');
 app.controller("editNoteCtrl", function($scope, notesFactory, $routeParams, $location){
 
 	$scope.title = "Edit Note";
-	$scope.submitButtonText = "Edit Item";
+	$scope.submitButtonText = "Edit Note";
 
 	$scope.note = {
 		createdBy: "",
