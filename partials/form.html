@@ -2,23 +2,23 @@
 <form>
     <div class="form-group">
         <label>Created By</label>
-        <input type="text" class="form-control" placeholder="Name" ng-model="note.createdBy"/>
+        <input type="text" class="form-control" placeholder="Name" ng-model="post.createdBy"/>
     </div>
     <div class="form-group">
         <label>Created Date</label>
-        <input type="text" class="form-control" placeholder="Mth/Day/Year" ng-model="note.createdDate"/>
+        <input type="text" class="form-control" placeholder="Mth/Day/Year" ng-model="post.createdDate"/>
     </div>
     <div class="form-group">
-        <label>Note</label>
-        <input type="text" class="form-control" placeholder="Add Your Note" ng-model="note.note"/>
+        <label>Post</label>
+        <input type="text" class="form-control" placeholder="Add Your Post" ng-model="post.post"/>
     </div>
     <!-- choose image button -->
     <div class="form-group">
         <br>
-        <label>Upload Image</label>
-        <input type="file" class="upload-group" id = "file">
+        <label class="upload-group">Upload Image</label>
+        <input type="file" class="upload-group" id="file">
     </div>
     <div class="text-center">
-            <button class="btn btn-default" ng-click="submitNote()">{{submitButtonText}}</button>    
+            <button class="btn btn-default" id="uploadButton" ng-click="submitPost()">{{submitButtonText}}</button>    
         </div>
     </form>

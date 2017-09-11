@@ -3,33 +3,33 @@
 console.log('inside of control-edit.js');
 
 
-app.controller("editNoteCtrl", function($scope, notesFactory, $routeParams, $location){
+app.controller("editPostCtrl", function($scope, postsFactory, $routeParams, $location){
 
-	$scope.title = "Edit Note";
-	$scope.submitButtonText = "Edit Note";
+	$scope.title = "Edit Post";
+	$scope.submitButtonText = "Edit Post";
 
-	$scope.note = {
+	$scope.post = {
 		createdBy: "",
 		createdDate: "",
-		note: ""
+		post: ""
 	};
 
-    const showEditNote = function(){
-    	notesFactory.getSingleNote($routeParams.itemId)
+    const showEditPost = function(){
+    	postsFactory.getSinglePost($routeParams.itemId)
     	.then((data) => {
     		console.log("data", data);
-    		$scope.note = data;
-    		$scope.note.id = $routeParams.itemId;
+    		$scope.post = data;
+    		$scope.post.id = $routeParams.itemId;
     	});
     };
 
-    $scope.submitNote = function(){
-    	notesFactory.editNote($routeParams.itemId, $scope.note)
+    $scope.submitPost = function(){
+    	postsFactory.editPost($routeParams.itemId, $scope.post)
     	.then((data) => {
-    		$location.path("/note-list");
+    		$location.path("/post-list");
     	});
     };
 
 
-    showEditNote();
+    showEditPost();
 });

@@ -26,7 +26,7 @@ app.controller("userCtrl", function ($scope, $window, userFactory, $location) {
         $scope.logIn = () => {
             userFactory.logIn($scope.account)
             .then( () => {
-                $window.location.href = "#!/note-list";
+                $window.location.href = "#!/post-list";
             });
         };
     
@@ -48,7 +48,7 @@ app.controller("userCtrl", function ($scope, $window, userFactory, $location) {
             userFactory.authWithProvider()
             .then( (result) =>{
                 let user = result.user.uid;
-                $location.path("/note-list");
+                $location.path("/post-list");
                 $scope.$apply();
             }).catch( (error) => {
                 console.log("error with google login");

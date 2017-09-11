@@ -8,11 +8,11 @@
 <!-- empty left side -->
 <div class="col-xs-1"></div>
 
-<!-- Loops over notes array -->
-<div ng-repeat="item in picArray | orderBy: '-createdDate'   | filter: searchText.search">
+<!-- Loops over posts array -->
+<div ng-repeat="item in postsArray | orderBy: '-createdDate'   | filter: searchText.search">
            
              
-             <div class="col-xs-2"><a ng-href="#!/note/{{item.id}}">{{item.note}}</a></div>
+             <div class="col-xs-2"><a ng-href="#!/post/{{item.id}}">{{item.post}}</a></div>
 
              
         </div>

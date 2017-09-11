@@ -22,32 +22,32 @@ let isAuth = (userFactory) => new Promise ( (resolve, reject) => {
 app.config(($routeProvider) => {
 	$routeProvider
 	.when('/', {
-		templateUrl: 'partials/note.html',
-		controller: 'noteCtrl',
+		templateUrl: 'partials/post.html',
+		controller: 'postCtrl',
 		resolve: {isAuth}
 	})
 	.when('/login', {
 		templateUrl: 'partials/user.html',
 		controller: 'userCtrl',
 	})
-	.when('/note/newNote', {
+	.when('/post/newPost', {
 		templateUrl: 'partials/form.html',
-		controller: 'addNoteCtrl',
+		controller: 'addPostCtrl',
 		resolve: {isAuth}
 	})
-	.when('/note-list', {
-		templateUrl: 'partials/note.html',
-		controller: 'noteCtrl',
+	.when('/post-list', {
+		templateUrl: 'partials/post.html',
+		controller: 'postCtrl',
 		resolve: {isAuth}
 	})
-	.when('/note/:itemId', {
+	.when('/post/:itemId', {
 		templateUrl: 'partials/details.html',
-		controller: 'detailNoteCtrl',
+		controller: 'detailPostCtrl',
 		resolve: {isAuth}
 	})
-	.when('/note/:itemId/edit', {
+	.when('/post/:itemId/edit', {
 		templateUrl: 'partials/form.html',
-		controller: 'editNoteCtrl',
+		controller: 'editPostCtrl',
 		resolve: {isAuth}
     })
     .otherwise('/');
