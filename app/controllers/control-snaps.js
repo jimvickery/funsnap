@@ -5,17 +5,17 @@ console.log('inside of control-notes.js');
 
 app.controller("noteCtrl", function($scope, notesFactory, userFactory, filterFactory, $rootScope){
 
-	$scope.notesArray = [];
+	$scope.picArray = [];
 	let user = userFactory.getCurrentUser();
 	$rootScope.showSearch = true; 
 	$scope.searchText = filterFactory;
 
 
-    const showAllnotes = function(){
+    const showAllpics = function(){
     	notesFactory.getAllNotes(user)
-    	.then((notesArray) => {
-    		console.log("showAllnotes from promise", notesArray);
-    		$scope.notesArray =  notesArray;
+    	.then((picArray) => {
+    		console.log("showAllpics from promise", picArray);
+    		$scope.picArray =  picArray;
     	});
     };
 
@@ -23,7 +23,7 @@ app.controller("noteCtrl", function($scope, notesFactory, userFactory, filterFac
     $scope.deleteNote = function(id){
     	notesFactory.deleteNote(id)
     	.then(() => {
-    		showAllnotes();
+    		showAllpics();
     	});
     };
 
@@ -34,10 +34,10 @@ app.controller("noteCtrl", function($scope, notesFactory, userFactory, filterFac
     	notesFactory.editNote(obj.id, tempObj)
     	.then( () => {
     		console.log("then is updated");
-    		showAllnotes();
+    		showAllpics();
     	});
     };
 
-    showAllnotes();
+    showAllpics();
 
 });

@@ -6,7 +6,7 @@ console.log('inside of control-add.js');
 app.controller("addNoteCtrl", function($scope, notesFactory, $location, userFactory){
 
 	$scope.title = "New Note";
-	$scope.submitButtonText = "Add Note";
+	$scope.submitButtonText = "Add Post";
 	
 
 	let user = userFactory.getCurrentUser();

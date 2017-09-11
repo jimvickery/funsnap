@@ -1,27 +1,24 @@
-<h1>Jim's Notes</h1>  
-
-<div class="panel panel-default">
-    <div class="panel-body sub_heading">
-        <div class="col-xs-2">Created By</div>
-        <div class="col-xs-2">Created Date</div>
-        <div class="col-xs-2">ID</div>            
-        <div class="col-xs-5">Note</div>
-        <div class="col-xs-1">Remove</div>
-    </div>
+ 
+<div class="col-xs-12 sub_heading">
+<h1>FunSnap - Post your amazing Snaps</h1> 
+    <br>
+ 
 </div>
 
-<div ng-repeat="item in notesArray | orderBy: '-createdDate'   | filter: searchText.search"  ng-class-odd="'odd'" ng-class-even="'even'">
+<!-- empty left side -->
+<div class="col-xs-1"></div>
+
 <!-- Loops over notes array -->
-        <div class="panel-body">
-             <div class="col-xs-2">{{item.createdBy}}</div>
-             <div class="col-xs-2">{{item.createdDate}}</div> 
-             <div class="col-xs-2">{{item.id}}</div>  
-             <div class="col-xs-5"><a ng-href="#!/note/{{item.id}}">{{item.note}}</a></div>
-             <div class="col-xs-1"><button ng-click="deleteNote(item.id)" class="btn btn-danger">X</button></div>
+<div ng-repeat="item in picArray | orderBy: '-createdDate'   | filter: searchText.search">
+           
              
-            
+             <div class="col-xs-2"><a ng-href="#!/note/{{item.id}}">{{item.note}}</a></div>
+
+             
         </div>
 </div>
+<!-- empty right side -->
+<div class="col-xs-1"></div>
 
 
 
