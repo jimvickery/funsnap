@@ -3,26 +3,27 @@
 console.log('inside of control-add.js');
 
 
-app.controller("addNoteCtrl", function($scope, notesFactory, $location, userFactory){
+app.controller("addPostCtrl", function($scope, postsFactory, $location, userFactory){
 
-	$scope.title = "New Note";
+	$scope.title = "New Post";
 	$scope.submitButtonText = "Add Post";
 	
 
 	let user = userFactory.getCurrentUser();
 
-	$scope.note = {
+	$scope.post = {
 		createdBy: "",
 		createdDate: $scope.value = new Date().toString().split("T")[0],
-		note: "",
+		post: "",
+		image: "",
 		uid: user
 	};
 
-    $scope.submitNote = function(){
+    $scope.submitPost = function(){
     	
-    	notesFactory.addNote($scope.note)
+    	postsFactory.addPost($scope.post)
     	.then((data) => {
-    		$location.url("/note-list");
+    		$location.url("/post-list");
     	});
     };
 

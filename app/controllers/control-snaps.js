@@ -1,43 +1,43 @@
 "use strict";
 
-console.log('inside of control-notes.js');
+console.log('inside of control-posts.js');
 
 
-app.controller("noteCtrl", function($scope, notesFactory, userFactory, filterFactory, $rootScope){
+app.controller("postCtrl", function($scope, postsFactory, userFactory, filterFactory, $rootScope){
 
-	$scope.picArray = [];
+	$scope.postsArray = [];
 	let user = userFactory.getCurrentUser();
 	$rootScope.showSearch = true; 
 	$scope.searchText = filterFactory;
 
 
-    const showAllpics = function(){
-    	notesFactory.getAllNotes(user)
-    	.then((picArray) => {
-    		console.log("showAllpics from promise", picArray);
-    		$scope.picArray =  picArray;
+	const showAllPosts = function(){
+    	postsFactory.getAllPosts(user)
+    	.then((postsArray) => {
+    		console.log("showAllPosts from promise", postsArray);
+    		$scope.postsArray =  postsArray;
     	});
     };
 
     
-    $scope.deleteNote = function(id){
-    	notesFactory.deleteNote(id)
+    $scope.deletePost = function(id){
+    	postsFactory.deletePost(id)
     	.then(() => {
-    		showAllpics();
+    		showAllPosts();
     	});
     };
 
-    $scope.toggleDoneNote = function(obj){
-    	console.log("toggleDoneNote", obj.isCompleted);
+    $scope.toggleDonePost = function(obj){
+    	console.log("toggleDonePost", obj.isCompleted);
     	let status = obj.isCompleted ? true : false; 
     	let tempObj = {isCompleted:status};
-    	notesFactory.editNote(obj.id, tempObj)
+    	postsFactory.editPost(obj.id, tempObj)
     	.then( () => {
     		console.log("then is updated");
-    		showAllpics();
+    		showAllPosts();
     	});
     };
 
-    showAllpics();
+    showAllPosts();
 
 });

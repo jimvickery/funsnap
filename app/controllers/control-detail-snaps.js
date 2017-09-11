@@ -6,17 +6,17 @@
 
  */
 
-app.controller("detailNoteCtrl", function($scope, $routeParams, notesFactory){
+app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory){
 
 	console.log("itemId", $routeParams.itemId);
 
-    const showNote = function(){
-    	notesFactory.getSingleNote($routeParams.itemId)
+    const showPost = function(){
+    	postsFactory.getSinglePost($routeParams.itemId)
     	.then((data) => {
-    		$scope.note = data;
-    		$scope.note.id = $routeParams.itemId;
+    		$scope.post = data;
+    		$scope.post.id = $routeParams.itemId;
     	});
     };
 
-    showNote();
+    showPost();
 });
