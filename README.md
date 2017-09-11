@@ -1,1 +1,1 @@
-# User-Notes-with-Authentication
+# FunSnap Front End Capstone
