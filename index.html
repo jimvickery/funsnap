@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Notes App</title>
+    <title>FunSnap App</title>
     <link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
 <!-- app connection -->
-   <div ng-app="NotesApp">
+   <div ng-app="FunSnapApp">
         <div ng-include="'partials/navbar.html'"></div>
     	<div>
             <div class="row">
@@ -31,7 +31,7 @@
     <script src="app/values/fb-creds.js"></script>
 
     <!-- factories -->
-    <script src="./app/factory/factory-notes.js"></script>
+    <script src="./app/factory/factory-snaps.js"></script>
     <script src="./app/factory/factory-user.js"></script>
     <script src="./app/factory/factory-filter.js"></script>
     
@@ -39,11 +39,11 @@
     
 
     <!-- controllers -->
-    <script src="./app/controllers/control-add-notes.js"></script>
-    <script src="./app/controllers/control-detail-notes.js"></script>
-    <script src="./app/controllers/control-edit-notes.js"></script>
+    <script src="./app/controllers/control-add-snaps.js"></script>
+    <script src="./app/controllers/control-detail-snaps.js"></script>
+    <script src="./app/controllers/control-edit-snaps.js"></script>
     <script src="./app/controllers/control-navbar.js"></script>
-    <script src="./app/controllers/control-notes.js"></script>
+    <script src="./app/controllers/control-snaps.js"></script>
     <script src="./app/controllers/control-user.js"></script>
     
     

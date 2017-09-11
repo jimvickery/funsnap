@@ -2,7 +2,7 @@
 console.log('inside of app.js');
 
 
-const app = angular.module("NotesApp", ["ngRoute"]);
+const app = angular.module("FunSnapApp", ["ngRoute"]);
 
 let isAuth = (userFactory) => new Promise ( (resolve, reject) => {
   console.log("userFactory is", userFactory);

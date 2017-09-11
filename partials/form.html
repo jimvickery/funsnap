@@ -12,6 +12,12 @@
         <label>Note</label>
         <input type="text" class="form-control" placeholder="Add Your Note" ng-model="note.note"/>
     </div>
+    <!-- choose image button -->
+    <div class="form-group">
+        <br>
+        <label>Upload Image</label>
+        <input type="file" class="upload-group" id = "file">
+    </div>
     <div class="text-center">
             <button class="btn btn-default" ng-click="submitNote()">{{submitButtonText}}</button>    
         </div>
