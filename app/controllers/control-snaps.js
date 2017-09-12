@@ -20,12 +20,12 @@ app.controller("postCtrl", function($scope, postsFactory, userFactory, filterFac
     };
 
     
-    $scope.deletePost = function(id){
-    	postsFactory.deletePost(id)
-    	.then(() => {
-    		showAllPosts();
-    	});
-    };
+    // $scope.deletePost = function(id){
+    // 	postsFactory.deletePost(id)
+    // 	.then(() => {
+    // 		showAllPosts();
+    // 	});
+    // };
 
     $scope.toggleDonePost = function(obj){
     	console.log("toggleDonePost", obj.isCompleted);

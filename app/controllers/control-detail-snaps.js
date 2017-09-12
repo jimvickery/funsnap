@@ -1,14 +1,11 @@
 "use strict";
 
-/*
-    
-    handle data for detail view
 
- */
-
-app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory){
+app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory, $location){
 
 	console.log("itemId", $routeParams.itemId);
+
+
 
     const showPost = function(){
     	postsFactory.getSinglePost($routeParams.itemId)
@@ -16,7 +13,16 @@ app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory){
     		$scope.post = data;
     		$scope.post.id = $routeParams.itemId;
     	});
+	};
+	showPost();
+
+
+	$scope.deletePost = function(id){
+    	postsFactory.deletePost(id)
+    	.then(() => {
+			$location.path("/post-list");	
+    	});
     };
 
-    showPost();
+	
 });

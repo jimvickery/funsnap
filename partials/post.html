@@ -1,25 +1,27 @@
- 
-<div class="col-xs-12 sub_heading">
-<h1>FunSnap - Post your amazing Snaps</h1> 
-    <br>
- 
+<div class="row">
+    <div class="row col-xs-12 sub_heading">
+    <h1 class="headline">Fun</span> <span class="headline_underline">Images</span> and <span class="headline_underline">Memes</span> all the <span class="headline_underline">time</span></h1> 
+        <br>
+    
+    </div>
 </div>
+<!-- main insert on homepage -->
 
-<!-- empty left side -->
-<div class="col-xs-1"></div>
+<div class="row inset_bg"> 
 
-<!-- Loops over posts array -->
-<div ng-repeat="item in postsArray | orderBy: '-createdDate'   | filter: searchText.search">
-           
-             
-             <div class="col-xs-2"><a ng-href="#!/post/{{item.id}}">{{item.post}}</a></div>
 
-             
+<!-- holder for images -->
+        <!-- Loops over posts array -->
+        <div ng-repeat="item in postsArray | orderBy: '+createdDate'   | filter: searchText.search">
+            
+        <div class="col-md-2"><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="185" height="186" class="front_page"></a></div>
+                
+                    
         </div>
+
+
+
 </div>
-<!-- empty right side -->
-<div class="col-xs-1"></div>
-
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
