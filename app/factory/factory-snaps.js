@@ -25,34 +25,7 @@ app.factory("postsFactory", function($q, $http, FBCreds){
         });
     };
 
-    /************ Photos ************/
-    let saveImage = function (imageBlob, user) {
-        // initiate storage reference
-        let storageReference = firebase.storage().ref();
-        let newPhotoObject = {};
-        // store reference to a variable to later delete  item in storagebucket
-        let holdStorageChild = storageReference.child(`"images/${user}.png"`);
-        newPhotoObject.storage_ref = holdStorageChild.location.path;
-        return $q( (resolve, reject) => {
-            holdStorageChild.put(imageBlob)
-            .then((response) => {
-                return holdStorageChild.getDownloadURL();
-            })
-            .then( (picObj) => {
-                newPhotoObject.url = picObj;
-                newPhotoObject.uid = user;
-                return $http.post(`${FBCreds.databaseURL}/.json`, newPhotoObject);
-            })
-            .then( (key) => {
-                newPhotoObject.key = key.data.name;
-                resolve(newPhotoObject);
-            })
-            .catch( (error) => {
-                reject(error);
-            });
 
-        });
-    };
 
     const addPost = function(obj){
         let newObj = JSON.stringify(obj);

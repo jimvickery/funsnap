@@ -7,15 +7,16 @@ app.controller("addPostCtrl", function($scope, postsFactory, $location, userFact
 
 	$scope.title = "New Post";
 	$scope.submitButtonText = "Add Post";
-	
+
 
 	let user = userFactory.getCurrentUser();
 
 	$scope.post = {
-		createdBy: "",
+		createdBy: "Jim",
 		createdDate: $scope.value = new Date().toString().split("T")[0],
+		imageURL: "",
 		post: "",
-		image: "",
+		keywords: "",
 		uid: user
 	};
 

@@ -11,7 +11,9 @@ app.controller("editPostCtrl", function($scope, postsFactory, $routeParams, $loc
 	$scope.post = {
 		createdBy: "",
 		createdDate: "",
-		post: ""
+		imageURL: "",
+		post: "",
+		keywords: ""
 	};
 
     const showEditPost = function(){

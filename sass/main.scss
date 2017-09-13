@@ -1,5 +1,6 @@
 .heading {
-    background-color: rgba(0, 128, 0, 0.75);
+    // background-color: rgba(0, 128, 0, 0.75);
+    background-color: rgba(80, 8, 182, 0.75);
     color: white;
     
 }
@@ -8,29 +9,64 @@
     color: #fff;
   }
 
-  .even {
-    background-color: rgba(211, 211, 211, 0.23);
-    border-radius: 12px;
-    margin: 8px 0px;
-  }
-
-  .odd {
-    background-color: rgba(250, 250, 210, 0.81);
-    border-radius: 12px;
-    
-  }
+  
 
   .sub_heading {
       text-align: center;
       font-size: 16px;
       font-weight: bold;
       // background-color: white;
-      color: black;
+      color: white;
   }
 
-  body {
-    background-color: rgba(250, 250, 210, 0.29);
-    // background-color: rgba(210, 180, 140, 0.03);
-    
-  }
+  
+
+.bg_color {
+  background-color: rgba(43, 3, 101, 0.93);;
+}
+
+.front_page {
+  margin: 5px;
+}
+
+
+//control size of headline text
+.headline {
+  font-size: 32px;
+}
+
+//color underline for headline text
+.headline_underline {
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  
+}
+
+// holder of images on homepage and used for details page bg inset
+.inset_bg {
+  background-color: rgba(80, 8, 182, 0.75);
+  padding-right: 22px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-radius: 8px;
+}
+
+//formatting for the submission and edit form
+.inset_bg_form {
+  background-color: rgba(80, 8, 182, 0.75);
+  padding: 22px;
+  border-radius: 8px;
+}
+
+//used for all text to contrast with dark bg
+.white_text {
+  color: white;
+}
+
+.btn_yellow {
+  background-color: goldenrod;
+  color: purple;
+  font-style: bold;
+  margin-left: 8px;
+}
 
