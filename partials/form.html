@@ -19,6 +19,11 @@
             <label class="white_text">Image URL</label>
             <input type="text" class="form-control" placeholder="Put Image URL Here" ng-model="post.imageURL"/>
         </div>
+
+        <!-- displays a small image of the post that's being edited -->
+        <div><img ng-src="{{post.imageURL}}" width="220"> 
+        </div>
+            
         <br>
 
         <!-- Add Your Post Here Field -->

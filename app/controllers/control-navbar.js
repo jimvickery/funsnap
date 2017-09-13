@@ -7,6 +7,11 @@ app.controller("navCtrl", function($scope, $window, userFactory, filterFactory){
   $scope.searchText = filterFactory;
 	$scope.isLoggedIn = false;
 
+
+  function clearSearch() {
+    $scope.searchText = "";
+  }
+
 	$scope.logout = () => {
     	userFactory.logOut();
   	};
