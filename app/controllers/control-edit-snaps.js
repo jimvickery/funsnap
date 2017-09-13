@@ -13,6 +13,7 @@ app.controller("editPostCtrl", function($scope, postsFactory, $routeParams, $loc
 		createdDate: "",
 		imageURL: "",
 		imageURL2: "",
+		imageURL3: "",
 		post: "",
 		keywords: ""
 	};

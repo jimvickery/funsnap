@@ -7,7 +7,7 @@ app.factory("postsFactory", function($q, $http, FBCreds){
 
     const getAllPosts = function(user){
         let posts = [];
-        console.log("url ", `${FBCreds.databaseURL}/posts.json?orderBy="uid"&equalTo="${user}"`);
+        console.log("url ", `${FBCreds.databaseURL}/posts.json?orderBy="createdDate"&equalTo="${user}"`);
         return $q( (resolve, reject) => {
             $http.get(`${FBCreds.databaseURL}/posts.json?orderBy="uid"&equalTo="${user}"`)
             .then((itemObject) => {
@@ -65,6 +65,7 @@ app.factory("postsFactory", function($q, $http, FBCreds){
             });
         });
     };
+    
 
     const getSinglePost = function(itemId){
         return $q((resolve, reject) => {
