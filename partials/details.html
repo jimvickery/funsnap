@@ -1,37 +1,48 @@
 <h2></h2>
-<div class="col-xs-12">
+<!-- <div class="col-xs-12"> -->
 
-	<h3 class="white_text">{{post.post}}</h3>
-</br>
+	
 	<!-- <ul class="list-group">
 	    <li class="list-group-item"><strong>Created By: </strong>{{post.createdBy}}</li>
         <li class="list-group-item"><strong>Created Date: </strong>{{post.createdDate}}</li>
         
 	</ul> -->
-
-
-	<!-- Loops over posts array -->
 		
 
-	<!-- row for displayed images and most viewed images -->
+	<!-- row for Headline, displayed images and most viewed images -->
 	<div class="row">
-		<div class="col-xs-9 inset_bg"><img ng-src="{{post.imageURL}}" width="600">
+		<div class="col-xs-8 inset_bg">
+			
+			<!-- headline of post -->
+				<h3 class="white_text">{{post.post}}
+				
+				<!-- next button -->
+				<button class="btn btn_yellow id="nextButton" align="right" ng-click="getNextPost(post.id)">Next Post</a></button>
+			</h3>
+			</br>
+		
+
+			<!-- first image url fetch -->
+			<img ng-src="{{post.imageURL}}" width="600">
 		<br><br>
-		<span class="col-xs-9 inset_bg"><img ng-src="{{post.imageURL2}}" width="600">
+			<!-- second image url fetch -->
+		<span class=""><img ng-src="{{post.imageURL2}}" width="600">
+		<br><br>
+			<!-- third image url fetch -->
+			<span class=""><img ng-src="{{post.imageURL3}}" width="600">
 			
 			<br><br>
 			<!-- row for social media: Facebook, Pinterest, Twitter -->
 			<div class="white_text">Twitter Facebook, Pinterest</div>
 		</div>
 		<div class="col-xs-1"></div>
-		<div class="col-xs-2 white_text most_viewed">Most Viewed Goes Here</div>
+		<div class="col-xs-3 white_text most_viewed">Most Viral Images</div>
 	</div>
 	<br>
 
-
 		<!-- row for buttons -->
 		<div class="row"> 
-				<div class="col-xs-9 inset_bg">	
+				<div class="col-xs-8 inset_bg">	
 				<button class="btn btn_yellow"><a ng-href="#!/post/{{post.id}}/edit">Edit</a></button>
 				<button ng-click="deletePost(post.id)" class="btn btn-danger">Delete</button>
 				</div>
@@ -39,12 +50,12 @@
 
 		<br>
 		<!-- row for comments -->
-		<div class="col-xs-9 inset_bg white_text">	Comments Go Here</div>
+		<div class="col-xs-8 inset_bg white_text">	Comments Go Here</div>
 		<br><br><br>
 
 		</div>	
 		
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 <br><br><br>

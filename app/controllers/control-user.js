@@ -43,7 +43,7 @@ app.controller("userCtrl", function ($scope, $window, userFactory, $location) {
       };
     
         $scope.loginGoogle = () => {
-            console.log("you clicked on google login");
+            console.log("clicked on google login");
     
             userFactory.authWithProvider()
             .then( (result) =>{

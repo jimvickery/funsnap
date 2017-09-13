@@ -9,7 +9,7 @@ let isAuth = (userFactory) => new Promise ( (resolve, reject) => {
   userFactory.isAuthenticated()
   .then( (userExists) => {
     if(userExists){
-      console.log("Authenticated, go ahead");
+      console.log("Authenticated, you can go in");
       resolve();
     }else {
       console.log("Authentication reject, GO AWAY");

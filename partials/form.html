@@ -17,26 +17,38 @@
         
         <!-- First Image URL field -->
         <div class="form-group">
-            <label class="white_text">Image URL</label>
+            <label class="white_text">First Image URL</label>
             <input type="text" class="form-control" placeholder="Put Image URL Here" ng-model="post.imageURL"/>
         </div>
         <br>
         <!-- displays a small image of the post that's being edited -->
-        <div><img ng-src="{{post.imageURL}}" width="220"> 
-            <!-- displays a small image of the second image that's being edited -->
+        <div><img ng-src="{{post.imageURL}}" width="220">
+
+        <!-- displays a small image of the second image that's being edited -->
         <img ng-src="{{post.imageURL2}}" width="220"> 
+        
+
+        <!-- displays a small image of the third image that's being edited -->
+        <img ng-src="{{post.imageURL3}}" width="220"> 
         </div>
+        
 
         <br>
 
          <!-- Second Image URL field -->
          <div class="form-group">
             <label class="white_text">Second Image URL (Optional)</label>
-            <input type="text" class="form-control" placeholder="Put Image URL Here" ng-model="post.imageURL2"/>
+            <input type="text" class="form-control" placeholder="Put Second Image URL Here" ng-model="post.imageURL2"/>
         </div>
         <br>
         
 
+        <!-- Third Image URL field -->
+        <div class="form-group">
+                <label class="white_text">Third Image URL (Optional)</label>
+                <input type="text" class="form-control" placeholder="Put Third Image URL Here" ng-model="post.imageURL3"/>
+            </div>
+            <br>
         
             
         
@@ -63,4 +75,4 @@
         <br>
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
