@@ -15,6 +15,7 @@ app.controller("addPostCtrl", function($scope, postsFactory, $location, userFact
 		createdBy: "Jim",
 		createdDate: $scope.value = new Date().toString().split("T")[0],
 		imageURL: "",
+		imageURL2: "",
 		post: "",
 		keywords: "",
 		uid: user

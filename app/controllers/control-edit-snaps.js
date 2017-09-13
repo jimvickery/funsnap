@@ -12,6 +12,7 @@ app.controller("editPostCtrl", function($scope, postsFactory, $routeParams, $loc
 		createdBy: "",
 		createdDate: "",
 		imageURL: "",
+		imageURL2: "",
 		post: "",
 		keywords: ""
 	};
