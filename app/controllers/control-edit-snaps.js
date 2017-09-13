@@ -28,7 +28,7 @@ app.controller("editPostCtrl", function($scope, postsFactory, $routeParams, $loc
     $scope.submitPost = function(){
     	postsFactory.editPost($routeParams.itemId, $scope.post)
     	.then((data) => {
-    		$location.path("/post-list");
+    		$location.path("#!/item-list");
     	});
     };
 
