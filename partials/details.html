@@ -24,10 +24,10 @@
 
 			<!-- first image url fetch -->
 			<img ng-src="{{post.imageURL}}" width="600">
-		<br><br>
+			<br><br>
 			<!-- second image url fetch -->
-		<span class=""><img ng-src="{{post.imageURL2}}" width="600">
-		<br><br>
+			<span class=""><img ng-src="{{post.imageURL2}}" width="600">
+			<br><br>
 			<!-- third image url fetch -->
 			<span class=""><img ng-src="{{post.imageURL3}}" width="600">
 			
@@ -35,10 +35,22 @@
 			<!-- row for social media: Facebook, Pinterest, Twitter -->
 			<div class="white_text">Twitter Facebook, Pinterest</div>
 		</div>
-		<div class="col-xs-1"></div>
-		<div class="col-xs-3 white_text most_viewed">Most Viral Images</div>
+		<div class="col-xs-0"></div>
+		<!-- most popular images -->
+		<div class="col-xs-4 white_text most_viewed"><h4 align="center">Most Viral Images</h4>
+				
+				<!-- added postCtrl controller to get the items in postArray -->
+				<div class="panel-body" ng-controller="postCtrl">
+					<div class="sm_inset_bg" ng-repeat="item in postsArray | limitTo: 20">
+					<div><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="145" height="100" class="front_page"></a>
+						{{item.post}}
+					</div>	
+				</div>
+
+		</div>
+
 	</div>
-	<br>
+		<br>
 
 		<!-- row for buttons -->
 		<div class="row"> 
@@ -56,6 +68,5 @@
 		</div>	
 		
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 <br><br><br>
