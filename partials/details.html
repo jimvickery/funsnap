@@ -16,22 +16,34 @@
 			<!-- headline of post -->
 				<h3 class="white_text">{{post.post}}
 				
+			<!-- TODO fix next button, not working now -->
 				<!-- next button -->
-				<button class="btn btn_yellow id="nextButton" align="right" ng-click="getNextPost(post.id)">Next Post</a></button>
+				<!-- <div ng-controller="postCtrl">
+					<div ng-repeat="nextLink in postsArray | limitTo: 1">
+				<button class="btn btn_yellow id="nextButton" align="right">"<a href  ng-click="#!/post/{{nextLink.id}}">Next Post</a></button>
+				<div>	 -->
+
+			<!-- closing h3 tag for headline post		 -->
 			</h3>
 			</br>
 		
 
 			<!-- first image url fetch -->
 			<img ng-src="{{post.imageURL}}" width="600">
-			<br><br>
+				<br><br> <p class="white_text">{{post.imageDetail1}}</p>
+				<br>
+
 			<!-- second image url fetch -->
 			<span class=""><img ng-src="{{post.imageURL2}}" width="600">
-			<br><br>
+				<br><br> <p class="white_text">{{post.imageDetail2}}</p>
+				<br>
+
+
 			<!-- third image url fetch -->
 			<span class=""><img ng-src="{{post.imageURL3}}" width="600">
+				<br><br> <p class="white_text">{{post.imageDetail3}}</p>
+				<br>
 			
-			<br><br>
 			<!-- row for social media: Facebook, Pinterest, Twitter -->
 			<div class="white_text">Twitter Facebook, Pinterest</div>
 		</div>
@@ -39,26 +51,27 @@
 		<!-- most popular images -->
 		<div class="col-xs-4 white_text most_viewed"><h4 align="center">Most Viral Images</h4>
 				
-				<!-- added postCtrl controller to get the items in postArray -->
+				<!-- added postCtrl controller to get the items in postArray for right side bar Most Viral Images -->
 				<div class="panel-body" ng-controller="postCtrl">
 					<div class="sm_inset_bg" ng-repeat="item in postsArray | limitTo: 20">
 					<div><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="145" height="100" class="front_page"></a>
-						{{item.post}}
+						<a ng-href="#!/post/{{item.id}}">{{item.post}}</a>
 					</div>	
 				</div>
 
 		</div>
 
 	</div>
-		<br>
-
+		
 		<!-- row for buttons -->
+	<div>
 		<div class="row"> 
 				<div class="col-xs-8 inset_bg">	
 				<button class="btn btn_yellow"><a ng-href="#!/post/{{post.id}}/edit">Edit</a></button>
 				<button ng-click="deletePost(post.id)" class="btn btn-danger">Delete</button>
 				</div>
 		</div>
+	</div>
 
 		<br>
 		<!-- row for comments -->

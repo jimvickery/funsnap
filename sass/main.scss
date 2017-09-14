@@ -52,11 +52,19 @@
   border-radius: 8px;
 }
 
+
+// inset for most viral images
 .sm_inset_bg {
   background-color: rgba(80, 8, 182, 0.75);
   border-radius: 5px;
   margin: 5px 0px;
   vertical-align: top;
+  padding: 1px;
+  color: white;
+  a {
+    color: white;
+  }
+ 
 }
 
 //formatting for the submission and edit form
@@ -86,4 +94,17 @@
 .panel-body {
   overflow: scroll;
   height: 700px;
+}
+
+// used to tab over the label and text input for image descriptions 
+.margin_left {
+  margin-left: 120px;
+}
+
+//used to set the imput field for the image details input
+.image_desc_input {
+  width: 600px;
+  border-radius: 5px;
+  padding-left: 6px;
+  margin-left: 12px;
 }

@@ -14,12 +14,25 @@
             <input type="text" class="form-control" placeholder="Mth/Day/Year" ng-model="post.createdDate"/>
         </div>
         <br>
+
+         <!-- Add Your Post Field -->
+         <div class="form-group">
+                <label class="white_text">Post Heading</label>
+                <input type="text" class="form-control" placeholder=" Add Your Post" ng-model="post.post"/>
+            </div>
+            <br>
+    
         
         <!-- First Image URL field -->
         <div class="form-group">
             <label class="white_text">First Image URL</label>
             <input type="text" class="form-control" placeholder="Put Image URL Here" ng-model="post.imageURL"/>
         </div>
+                <!-- first Image Details -->  
+                <label class="white_text margin_left">First Image Details (Optional)</label>
+                <input  class="image_desc_input" type="text" class="form-control" placeholder="Put Image1 Detail Here" ng-model="post.imageDetail1"/>
+
+
         <br>
         <!-- displays a small image of the post that's being edited -->
         <div><img ng-src="{{post.imageURL}}" width="220">
@@ -40,7 +53,12 @@
             <label class="white_text">Second Image URL (Optional)</label>
             <input type="text" class="form-control" placeholder="Put Second Image URL Here" ng-model="post.imageURL2"/>
         </div>
-        <br>
+                <!-- second Image Details -->  
+                <label class="white_text margin_left">Second Image Details (Optional)</label>
+                <input  class="image_desc_input" type="text" class="form-control" placeholder="Put Image1 Detail Here" ng-model="post.imageDetail2"/>
+
+            <br><br><br>
+        
         
 
         <!-- Third Image URL field -->
@@ -48,18 +66,17 @@
                 <label class="white_text">Third Image URL (Optional)</label>
                 <input type="text" class="form-control" placeholder="Put Third Image URL Here" ng-model="post.imageURL3"/>
             </div>
-            <br>
-        
+                    <!-- third Image Details -->  
+                <label class="white_text margin_left">Third Image Details (Optional)</label>
+                <input  class="image_desc_input" type="text" class="form-control" placeholder="Put Image1 Detail Here" ng-model="post.imageDetail3"/>
+
+
+                <br><br><br>
+                
             
         
 
-        <!-- Add Your Post Here Field -->
-        <div class="form-group">
-            <label class="white_text">Post Heading</label>
-            <input type="text" class="form-control" placeholder=" Add Your Post" ng-model="post.post"/>
-        </div>
-        <br>
-
+       
         <!-- Add Keywords Field -->
         <div class="form-group">
                 <label class="white_text">Keywords (Optional)</label>
