@@ -22,7 +22,8 @@
   
 
 .bg_color {
-  background-color: rgba(43, 3, 101, 0.93);;
+  background-color: rgba(43, 3, 101, 0.93);
+  min-height: 900px;
 }
 
 .front_page {
@@ -51,6 +52,13 @@
   border-radius: 8px;
 }
 
+.sm_inset_bg {
+  background-color: rgba(80, 8, 182, 0.75);
+  border-radius: 5px;
+  margin: 5px 0px;
+  vertical-align: top;
+}
+
 //formatting for the submission and edit form
 .inset_bg_form {
   background-color: rgba(80, 8, 182, 0.75);
@@ -72,4 +80,10 @@
 
 #nextButton {
   justify-content: right;
+}
+
+// scroll bar for most viral videos
+.panel-body {
+  overflow: scroll;
+  height: 700px;
 }
