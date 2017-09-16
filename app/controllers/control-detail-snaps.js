@@ -24,6 +24,13 @@ app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory, $l
 			$location.path("/post-list");	
     	});
 	};
+
+
+	$scope.nextPage = function () {
+		$scope._Index = ($scope._Index < $scope.nbItems - 1) ? ++$scope._Index : 0;
+		$scope.functionToCallWithNextItem($scope.nextPage.param1);
+	};
+	
 	
 
 

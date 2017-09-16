@@ -14,8 +14,24 @@
 		<div class="col-xs-8 inset_bg">
 			
 			<!-- headline of post -->
-				<h3 class="white_text">{{post.post}}
+				<h3 class="white_text">{{post.post}}</h3>
 				
+
+					<!-- gets the next link for tne next button -->
+						<div ng-controller="postCtrl">
+								  <span ng-repeat="link in postsArray">
+									  <span class="white_text"> 
+										  <span ng-if="link.id == post.id">
+											    {{post.id +1}} 
+												<span class="btn btn_yellow"><a ng-href="#!/post/{{link.id}">Next Post</a></span>
+												
+											
+
+									  </span>
+								  </span>
+								
+						</div>
+
 			<!-- TODO fix next button, not working now -->
 				<!-- next button -->
 				<!-- <div ng-controller="postCtrl">
