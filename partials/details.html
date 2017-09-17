@@ -22,7 +22,7 @@
 			<!-- TODO fix next button, currently shows all buttons Sept 17-->
 				<!-- next button -->
 				<div ng-controller="postCtrl">
-					<span ng-repeat="nextLink in postsArray" ng-if"nextLink" == "post.id">
+					<span ng-repeat="nextLink in postsArray">
 						<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{nextLink.id}}">Next Post</a></button>
 					</span>
 				</div>	
