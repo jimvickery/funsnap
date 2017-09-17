@@ -14,14 +14,18 @@
 		<div class="col-xs-8 inset_bg">
 			
 			<!-- headline of post -->
-				<h3 class="white_text">{{post.post}}
+				<h3 class="white_text">{{post.post}}</h3>
 				
-			<!-- TODO fix next button, not working now -->
+
+					
+
+			<!-- TODO fix next button, currently shows all buttons Sept 17-->
 				<!-- next button -->
-				<!-- <div ng-controller="postCtrl">
-					<div ng-repeat="nextLink in postsArray | limitTo: 1">
-				<button class="btn btn_yellow id="nextButton" align="right">"<a href  ng-click="#!/post/{{nextLink.id}}">Next Post</a></button>
-				<div>	 -->
+				<div ng-controller="postCtrl">
+					<span ng-repeat="nextLink in postsArray">
+						<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{nextLink.id}}">Next Post</a></button>
+					</span>
+				</div>	
 
 			<!-- closing h3 tag for headline post		 -->
 			</h3>
@@ -53,7 +57,7 @@
 				
 				<!-- added postCtrl controller to get the items in postArray for right side bar Most Viral Images -->
 				<div class="panel-body" ng-controller="postCtrl">
-					<div class="sm_inset_bg" ng-repeat="item in postsArray | limitTo: 20">
+					<div class="sm_inset_bg" ng-repeat="item in postsArray | orderBy: '-createdDate'">
 					<div><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="145" height="100" class="front_page"></a>
 						<a ng-href="#!/post/{{item.id}}">{{item.post}}</a>
 					</div>	
