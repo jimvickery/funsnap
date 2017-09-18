@@ -42,8 +42,12 @@
 
         <!-- Start of image displays and details of pics -->
         <div id="white_box">
-                <div>
-                        <h5 class="white_text desc_box">{{post.post}}</h5>
+                <div> <h3 class="white_text" align="center">Post Preview</h3>
+                    
+                    <span> 
+                        <h5 class="white_text desc_box">Headline:   
+                          {{post.post}}</h5>
+                    </span>
                         <hr>
                     <!-- displays a small image of the post that's being edited -->
                     <img ng-src="{{post.imageURL}}" width="220">
