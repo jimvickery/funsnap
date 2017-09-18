@@ -19,13 +19,17 @@
 
 					
 
-			<!-- TODO fix next button, currently shows all buttons Sept 17-->
+			<!-- TODO fix next button, currently shows only one button but need to loop one more time to get next index in array-->
 				<!-- next button -->
 				<div ng-controller="postCtrl">
 					<span ng-repeat="nextLink in postsArray">
-						<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{nextLink.id}}">Next Post</a></button>
+						<!-- conditional to check if post.id and array index are same -->
+						<span ng-if="(post.id == nextLink.id)">
+							<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{nextLink.id}}">Next Post</a></button>
+						</span>	
 					</span>
-				</div>	
+				</div>		
+				<!-- end of next button -->
 
 			<!-- closing h3 tag for headline post		 -->
 			</h3>
