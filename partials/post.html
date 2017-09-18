@@ -13,8 +13,9 @@
 <!-- holder for images -->
         <!-- Loops over posts array -->
         <div ng-repeat="item in postsArray | orderBy: '-createdDate'   | filter: searchText.search">
-        <div class="col-md-2"><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="185" height="186" class="front_page"></a></div>
-                
+        <div class="col-md-2"><a ng-mouseover="item.post" ng-init="count=0" ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="185" height="186" class="front_page"></a></div>
+          
+        <!-- ng-mouseover="{{item.post}}" -->
                     
         </div>
 
