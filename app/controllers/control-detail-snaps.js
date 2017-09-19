@@ -3,7 +3,7 @@
 
 app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory, $location){
 
-	console.log("itemId", $routeParams.itemId);
+	console.log("$routeParams itemId", $routeParams.itemId);
 		
 
 	// shows the post
@@ -11,7 +11,8 @@ app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory, $l
     	postsFactory.getSinglePost($routeParams.itemId)
     	.then((data) => {
 			$scope.post = data;			
-    		$scope.post.id = $routeParams.itemId;
+			$scope.post.id = $routeParams.itemId;
+			
     	});
 	};
 	showPost();
@@ -26,12 +27,16 @@ app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory, $l
 	};
 
 
-	$scope.nextPage = function () {
-		$scope._Index = ($scope._Index < $scope.nbItems - 1) ? ++$scope._Index : 0;
-		$scope.functionToCallWithNextItem($scope.nextPage.param1);
-	};
+	// $scope.nextPage = function () {
+	// 	$scope._Index = ($scope._Index < $scope.nbItems - 1) ? ++$scope._Index : 0;
+	// 	$scope.functionToCallWithNextItem($scope.nextPage.param1);
+	// };
 	
 	
+
+	
+
+
 
 
 });

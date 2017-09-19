@@ -22,16 +22,19 @@
 			<!-- TODO fix next button, currently shows only one button but need to loop one more time to get next index in array-->
 				<!-- next button -->
 				<div ng-controller="postCtrl">
-					<span ng-repeat="nextLink in postsArray">
-						<!-- conditional to check if post.id and array index are same -->
+						<!-- ng-if="(post.id == nextLink.id)" also works inside of ng-repeat parenthesis --> 
+					<span ng-repeat="(key, nextLink) in postsArray">
+						<!-- if conditional to check if post.id and nextLink.id are same so that only one next button displays -->
 						<span ng-if="(post.id == nextLink.id)">
 							<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{nextLink.id}}">Next Post</a></button>
+							<!-- <span class="white_text"> {{key}}</span> -->
+							<!-- <span class="white_text">====>{{nextPost.id}}</span> -->
 						</span>	
 					</span>
 				</div>		
 				<!-- end of next button -->
 
-			<!-- closing h3 tag for headline post		 -->
+			<!-- closing h3 tag for headline post-->
 			</h3>
 			</br>
 		
@@ -63,7 +66,7 @@
 				<div class="panel-body" ng-controller="postCtrl">
 					<div class="sm_inset_bg" ng-repeat="item in postsArray | orderBy: '-createdDate'">
 					<div><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="145" height="100" class="front_page"></a>
-						<a ng-href="#!/post/{{item.id}}">{{item.post}}</a>
+						 <a ng-href="#!/post/{{item.id}}">{{item.post}}</a>
 					</div>	
 				</div>
 
@@ -83,7 +86,7 @@
 
 		<br>
 		<!-- row for comments -->
-		<div class="col-xs-8 inset_bg white_text">	Comments Go Here</div>
+		<div class="col-xs-8 inset_bg white_text">Comments Go Here</div>
 		<br><br><br>
 
 		</div>	
