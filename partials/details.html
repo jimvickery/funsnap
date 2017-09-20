@@ -22,15 +22,17 @@
 			<!-- TODO fix next button, currently shows only one button but need to loop one more time to get next index in array-->
 				<!-- next button -->
 				<div ng-controller="postCtrl">
-						<!-- ng-if="(post.id == nextLink.id)" also works inside of ng-repeat parenthesis --> 
-					<span ng-repeat="(key, nextLink) in postsArray">
+						<!-- ng-if="(post.id == nextLink.id)" also works inside of ng-repeat parenthesis  -->
+					<span ng-repeat="(key, item) in postsArray"> 
 						<!-- if conditional to check if post.id and nextLink.id are same so that only one next button displays -->
-						<span ng-if="(post.id == nextLink.id)">
-							<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{nextLink.id}}">Next Post</a></button>
-							<!-- <span class="white_text"> {{key}}</span> -->
-							<!-- <span class="white_text">====>{{nextPost.id}}</span> -->
+						 <span ng-if="(post.id == item.id)">
+							<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{item.id}}">Next Post</a></button>
+							<!-- <span class="white_text"> Key: {{key + 1}} </span> -->
+							<!-- <span class="white_text">====>{{item.id}} {{$index +1}}</span> -->
 						</span>	
-					</span>
+
+					</span> 
+
 				</div>		
 				<!-- end of next button -->
 
@@ -56,7 +58,9 @@
 				<br>
 			
 			<!-- row for social media: Facebook, Pinterest, Twitter -->
-			<div class="white_text">Twitter Facebook, Pinterest</div>
+			<div class="white_text right_align">
+					<a data-pin-do="buttonPin" data-pin-count="above" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=https%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest"></a>
+			</div>
 		</div>
 		<div class="col-xs-0"></div>
 		<!-- most popular images -->

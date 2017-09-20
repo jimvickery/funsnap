@@ -16,6 +16,7 @@ app.factory("postsFactory", function($q, $http, FBCreds){
                 Object.keys(itemCollection).forEach((key) => {
                     itemCollection[key].id = key;
                     posts.push(itemCollection[key]);
+                    
                 });
                 resolve(posts);
                 })
