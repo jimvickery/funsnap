@@ -21,26 +21,20 @@
 
 				<!-- next button -->
 				<div ng-controller="postCtrl">
-						
 					<span ng-repeat="(key, item) in postsArray | orderBy: '-createdDate'" ng-if="(post.id == item.id)" ng-init="test1 = ($index + 1)"> 
 									
 							<span ng-if="test1 > $index">
 									<span ng-repeat="next in postsArray | orderBy: '-createdDate'" ng-if="(test1 == $index)">
-											<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{next.id}}">Next Post</a></button>
-											
+											<button class="btn btn_yellow right" id="nextButton"> <a ng-href="#!/post/{{next.id}}">Next Post</a></button>
 									</span>
 							</span>
-
-
-						
-
+							
 					</span> 
-
 				</div>		
 				<!-- end of next button -->
 
 			<!-- closing h3 tag for headline post-->
-			</h3>
+			<!-- </h3> -->
 			</br>
 		
 
