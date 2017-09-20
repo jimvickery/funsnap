@@ -55,7 +55,7 @@
 // inset for viral images
 .sm_inset_bg {
   background-color: rgba(80, 8, 182, 0.75);
-  border-radius: 5px;
+  border-radius: 8px;
   margin: 5px 0px;
   vertical-align: top;
   padding: 1px;
@@ -101,7 +101,7 @@
   justify-content: right;
 }
 
-// scroll bar for most viral videos
+// scroll bar for most viral images
 .panel-body {
   overflow: scroll;
   height: 700px;
@@ -120,11 +120,10 @@
   margin-left: 12px;
 }
 
+//description box on form view
 .desc_box {
   vertical-align: top;
   padding: 12px;
-  
-  
 }
 
 #white_box {
@@ -132,6 +131,10 @@
   padding: 7px;
   border: 2px solid white;
   border-radius: 9px;
+}
+
+.right_align {
+  align-items: right;
 }
 
 
