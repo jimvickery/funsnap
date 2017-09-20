@@ -97,8 +97,10 @@
   margin-left: 8px;
 }
 
-#nextButton {
-  justify-content: right;
+.right {
+  position: absolute;
+  right: 18px;
+  top: 18px;
 }
 
 // scroll bar for most viral images
