@@ -69,6 +69,11 @@
  
 }
 
+//used to place back and next button adjacent to each other
+.inline {
+  display:inline-block;
+  // margin-right:5px;
+}
 
 
 //formatting for the submission and edit form
@@ -101,6 +106,13 @@
   position: absolute;
   right: 18px;
   top: 18px;
+}
+
+.right_back {
+  position: absolute;
+  right: 120px;
+  top: 18px;
+  // margin-right:5px;
 }
 
 // scroll bar for most viral images
