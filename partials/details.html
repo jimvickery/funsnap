@@ -22,10 +22,10 @@
 				<!-- next button -->
 				<div ng-controller="postCtrl">
 						
-					<span ng-repeat="(key, item) in postsArray" ng-if="(post.id == item.id)" ng-init="test1 = ($index + 1)"> 
+					<span ng-repeat="(key, item) in postsArray | orderBy: '-createdDate'" ng-if="(post.id == item.id)" ng-init="test1 = ($index + 1)"> 
 									
 							<span ng-if="test1 > $index">
-									<span ng-repeat="next in postsArray" ng-if="(test1 == $index)">
+									<span ng-repeat="next in postsArray | orderBy: '-createdDate'" ng-if="(test1 == $index)">
 											<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{next.id}}">Next Post</a></button>
 											
 									</span>
@@ -71,9 +71,8 @@
 				
 				<!-- added postCtrl controller to get the items in postArray for right side bar Most Viral Images -->
 				<div class="panel-body" ng-controller="postCtrl">
-					<!-- next line (commented out) will order by descending date -->
-					<!-- <div class="sm_inset_bg" ng-repeat="item in postsArray | orderBy: '-createdDate'"> -->
-					<div class="sm_inset_bg" ng-repeat="item in postsArray">
+					<!-- Order by descending date in most viral images -->
+					<div class="sm_inset_bg" ng-repeat="item in postsArray | orderBy: '-createdDate'">
 									
 					<div><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="145" height="100" class="front_page"></a>
 						 <a ng-href="#!/post/{{item.id}}">{{item.post}}</a>
