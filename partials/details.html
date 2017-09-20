@@ -19,17 +19,20 @@
 
 					
 
-			<!-- TODO fix next button, currently shows only one button but need to loop one more time to get next index in array-->
 				<!-- next button -->
 				<div ng-controller="postCtrl">
-						<!-- ng-if="(post.id == nextLink.id)" also works inside of ng-repeat parenthesis  -->
-					<span ng-repeat="(key, item) in postsArray"> 
-						<!-- if conditional to check if post.id and nextLink.id are same so that only one next button displays -->
-						 <span ng-if="(post.id == item.id)">
-							<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{item.id}}">Next Post</a></button>
-							<!-- <span class="white_text"> Key: {{key + 1}} </span> -->
-							<!-- <span class="white_text">====>{{item.id}} {{$index +1}}</span> -->
-						</span>	
+						
+					<span ng-repeat="(key, item) in postsArray | orderBy: '-createdDate'" ng-if="(post.id == item.id)" ng-init="test1 = ($index + 1)"> 
+									
+							<span ng-if="test1 > $index">
+									<span ng-repeat="next in postsArray | orderBy: '-createdDate'" ng-if="(test1 == $index)">
+											<button class="btn btn_yellow" id="nextButton" align="right"> <a ng-href="#!/post/{{next.id}}">Next Post</a></button>
+											
+									</span>
+							</span>
+
+
+						
 
 					</span> 
 
@@ -68,7 +71,9 @@
 				
 				<!-- added postCtrl controller to get the items in postArray for right side bar Most Viral Images -->
 				<div class="panel-body" ng-controller="postCtrl">
+					<!-- Order by descending date in most viral images -->
 					<div class="sm_inset_bg" ng-repeat="item in postsArray | orderBy: '-createdDate'">
+									
 					<div><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="145" height="100" class="front_page"></a>
 						 <a ng-href="#!/post/{{item.id}}">{{item.post}}</a>
 					</div>	
@@ -78,7 +83,7 @@
 
 	</div>
 		
-		<!-- row for buttons -->
+		<!-- row for edit and delete buttons -->
 	<div>
 		<div class="row"> 
 				<div class="col-xs-8 inset_bg">	
