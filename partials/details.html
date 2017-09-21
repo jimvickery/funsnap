@@ -40,7 +40,7 @@
 						<span ng-if="test2 < $index">
 								<!-- nest button conditional -->
 								<span ng-repeat="next in postsArray | orderBy: '-createdDate'" ng-if="(test2 == $index)">
-										<button class="btn right_back inline" id="backButton"> <a ng-href="#!/post/{{next.id}}"> << </a></button>
+										<button class="btn right_back inline" id="backButton"> <a ng-href="#!/post/{{next.id}}"> < </a></button>
 								</span>	
 						</span>
 					</span> 
