@@ -25,7 +25,7 @@
 					<span ng-repeat="(key, item) in postsArray | orderBy: '-createdDate'" ng-if="(post.id == item.id)" ng-init="test1 = ($index + 1)"> 
 									
 							<span ng-if="test1 > $index">
-									<!-- nest button conditional -->
+									<!-- next button conditional -->
 									<span ng-repeat="next in postsArray | orderBy: '-createdDate'" ng-if="(test1 == $index)">
 											<button class="btn btn_yellow right inline" id="nextButton"> <a ng-href="#!/post/{{next.id}}">Next Post > </a></button>
 									</span>
@@ -38,7 +38,7 @@
 					<span ng-repeat="(key, item) in postsArray | orderBy: '-createdDate'" ng-if="(post.id == item.id)" ng-init="test2 = ($index - 1)"> 
 							
 						<span ng-if="test2 < $index">
-								<!-- nest button conditional -->
+								<!-- back button conditional -->
 								<span ng-repeat="next in postsArray | orderBy: '-createdDate'" ng-if="(test2 == $index)">
 										<button class="btn right_back inline" id="backButton"> <a ng-href="#!/post/{{next.id}}"> < </a></button>
 								</span>	
