@@ -51,6 +51,13 @@
   border-radius: 8px;
 }
 
+//back and next button and headline Holder
+.button_inset_bg {
+  background-color: rgba(80, 8, 182, 0.75);
+  padding-right: 22px;
+  border-radius: 8px 8px 0px 0px;
+}
+
 
 // inset for viral images
 .sm_inset_bg {
@@ -105,13 +112,13 @@
 .right {
   position: absolute;
   right: 18px;
-  top: 18px;
+  // top: 18px;
 }
 
 .right_back {
   position: absolute;
   right: 120px;
-  top: 18px;
+  // top: 18px;
   // margin-right:5px;
 }
 
@@ -150,6 +157,9 @@
 .right_align {
   align-items: right;
 }
+
+
+
 
 
 // formatting for post view text on mouseover headlines
