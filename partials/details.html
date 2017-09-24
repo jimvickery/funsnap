@@ -11,23 +11,22 @@
 
 	<!-- row for Headline, displayed images and most viewed images -->
 	<div class="row">
-		<div class="col-xs-8 inset_bg">
+		<div class="col-xs-8 button_inset_bg">
 			
+																			
 			<!-- headline of post -->
-				<h3 class="white_text">{{post.post}}</h3>
-				
+			<h3 class="white_text">{{post.post}}
 
-					
 
 				<!-- controller and logic for next and back buttons -->
-				<div ng-controller="postCtrl">
+				<span ng-controller="postCtrl">
 					<!-- next button -->
 					<span ng-repeat="(key, item) in postsArray | orderBy: '-createdDate'" ng-if="(post.id == item.id)" ng-init="test1 = ($index + 1)"> 
 									
 							<span ng-if="test1 > $index">
 									<!-- next button conditional -->
 									<span ng-repeat="next in postsArray | orderBy: '-createdDate'" ng-if="(test1 == $index)">
-											<button class="btn btn_yellow right inline" id="nextButton"> <a ng-href="#!/post/{{next.id}}">Next Post > </a></button>
+											<button class="btn btn_yellow right" id="nextButton"> <a ng-href="#!/post/{{next.id}}">Next Post > </a></button>
 									</span>
 							</span>
 					</span> 
@@ -40,18 +39,25 @@
 						<span ng-if="test2 < $index">
 								<!-- back button conditional -->
 								<span ng-repeat="next in postsArray | orderBy: '-createdDate'" ng-if="(test2 == $index)">
-										<button class="btn right_back inline" id="backButton"> <a ng-href="#!/post/{{next.id}}"> < </a></button>
+										<button class="btn right_back " id="backButton"> <a ng-href="#!/post/{{next.id}}"> < </a></button>
 								</span>	
 						</span>
 					</span> 
 
-				</div>		
-				<!-- end of controller and logic for next and back buttons -->
+				</span>
+			</h3>
+		</div>		
+																			<!-- end of controller and logic for next and back buttons -->
 
-			</br>
-		
+  <!-- <div class="col-xs-1"> </div> -->
+  <div class="col-xs-4 white_text most_viewed"><h4 align="center">Most Viral Images</h4></div>
+  
+</div>																
 
-			<!-- first image url fetch -->
+
+
+<div class="row">
+		<div class="col-xs-8 inset_bg"><!-- first image url fetch -->
 			<img ng-src="{{post.imageURL}}" width="600">
 				<br> <h4 class="white_text">{{post.imageDetail1}}<h/4>
 				<br><br></br>
@@ -66,32 +72,40 @@
 			<span class=""><img ng-src="{{post.imageURL3}}" width="600">
 				<br><h4 class="white_text">{{post.imageDetail3}}</h4>
 				<br>
-			
+			</div>
+		<div class="col-sm-4"> 
+			<!-- most popular images -->
+				
+			<!-- added postCtrl controller to get the items in postArray for right side bar Most Viral Images -->
+			<div class="panel-body" ng-controller="postCtrl">
+					<!-- Order by descending date in most viral images -->
+					<div class="sm_inset_bg" ng-repeat="item in postsArray | orderBy: '-createdDate'">
+									
+					<div><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="145" height="100" class="front_page"></a>
+						<a ng-href="#!/post/{{item.id}}">{{item.post}}</a>
+					</div>	
+				</div>
+
+			</div>
+		</div>
+		
+</div>	
+
+
+	<br>		
 			<!-- row for social media: Facebook, Pinterest, Twitter -->
 			<div class="white_text right_align">
 					<a data-pin-do="buttonPin" data-pin-count="above" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=https%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest"></a>
 			</div>
 		</div>
-		<div class="col-xs-0"></div>
-		<!-- most popular images -->
-		<div class="col-xs-4 white_text most_viewed"><h4 align="center">Most Viral Images</h4>
-				
-				<!-- added postCtrl controller to get the items in postArray for right side bar Most Viral Images -->
-				<div class="panel-body" ng-controller="postCtrl">
-					<!-- Order by descending date in most viral images -->
-					<div class="sm_inset_bg" ng-repeat="item in postsArray | orderBy: '-createdDate'">
-									
-					<div><a ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="145" height="100" class="front_page"></a>
-						 <a ng-href="#!/post/{{item.id}}">{{item.post}}</a>
-					</div>	
-				</div>
-
-		</div>
+		<!-- <div class="col-xs-0"></div> -->
+		
 
 	</div>
 		
 		<!-- row for edit and delete buttons -->
 	<div>
+		
 		<div class="row"> 
 				<div class="col-xs-8 inset_bg">	
 				<button class="btn btn_yellow"><a ng-href="#!/post/{{post.id}}/edit">Edit</a></button>
@@ -108,5 +122,4 @@
 		</div>	
 		
 
-</div>
 <br><br><br>
