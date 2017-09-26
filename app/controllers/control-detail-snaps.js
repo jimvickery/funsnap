@@ -37,9 +37,4 @@ $scope.go = function ($scrollLocation ) {
 // 	$('html, body').animate({scrollTop: destination}, 300);
 // };	
 
-	
-
-
-
-
 });
