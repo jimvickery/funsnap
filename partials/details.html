@@ -1,4 +1,4 @@
-<h2></h2>
+<h2 id="top"></h2>
 <!-- <div class="col-xs-12"> -->
 
 	
@@ -41,7 +41,7 @@
 						<span ng-if="test2 < $index">
 								<!-- back button conditional -->
 								<span ng-repeat="next in postsArray | orderBy: '-createdDate'" ng-if="(test2 == $index)">
-										<button class="btn right_back " id="backButton"> <a ng-href="#!/post/{{next.id}}"> < </a></button>
+										<button class="btn right_back" id="backButton"> <a ng-href="#!/post/{{next.id}}"> < </a></button>
 								</span>	
 						</span>
 					</span> 
@@ -112,6 +112,9 @@
 				<div class="col-xs-8 inset_bg">	
 				<button class="btn btn_yellow"><a ng-href="#!/post/{{post.id}}/edit">Edit</a></button>
 				<button ng-click="deletePost(post.id)" class="btn btn-danger">Delete</button>
+				
+				<button id="bottom" class="right" ng-click="go('top')">Go to Top</button>
+				<br>
 				</div>
 		</div>
 	</div>
@@ -120,7 +123,6 @@
 		<!-- row for comments -->
 		<div class="col-xs-8 inset_bg white_text">Comments Go Here</div>
 		<br><br><br>
-
 		</div>	
 		
 

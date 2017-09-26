@@ -1,7 +1,7 @@
 "use strict";
 
 
-app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory, $location){
+app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory, $location, $anchorScroll){
 
 	console.log("$routeParams itemId", $routeParams.itemId);
 		
@@ -27,12 +27,15 @@ app.controller("detailPostCtrl", function($scope, $routeParams, postsFactory, $l
 	};
 
 
-	// $scope.nextPage = function () {
-	// 	$scope._Index = ($scope._Index < $scope.nbItems - 1) ? ++$scope._Index : 0;
-	// 	$scope.functionToCallWithNextItem($scope.nextPage.param1);
-	// };
-	
-	
+//scroll to next viral image function --It works
+$scope.go = function ($scrollLocation ) {
+	$location.hash($scrollLocation);
+};
+
+// $scope.go = function(targetId){
+// 	var destination = $(targetId).offset().top;
+// 	$('html, body').animate({scrollTop: destination}, 300);
+// };	
 
 	
 
