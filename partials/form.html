@@ -114,5 +114,21 @@
         </form>
         <br>
 </div>
+<input type="button"  class="goToTop white_text_bold" value="Scroll Top" style="display:none;background-color:rgba(25, 44, 218, 0.74)"  />
 
 <br><br>
+
+<!-- scroll to top -->
+<script>
+	$(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.goToTop').fadeIn();
+        } else {
+            $('.goToTop').fadeOut();
+        }
+    });
+    $('.goToTop').click(function () {
+        $("html, body").animate({ scrollTop: 0}, 200);
+        return false;
+	});
+</script>
