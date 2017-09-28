@@ -166,14 +166,14 @@
   left: 50%;
   top: 50%;
   z-index: 0;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin: -70px 0 0 -75px;
   border: 6px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid rgba(43, 3, 101, 0.93);
-  width: 66px;
-  height: 66px;
+  border-top: 7px solid rgba(43, 3, 101, 0.93);
+  width: 46px;
+  height: 46px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
@@ -278,4 +278,8 @@
 .white_text_bold {
   color: white;
   font: bold;
+}
+
+.pos_z_index {
+  z-index: 21;
 }
