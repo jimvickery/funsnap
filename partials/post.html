@@ -20,9 +20,10 @@
         </div>
 
 <!-- if conditional to test if new card holder is needed on main view -->
-<div ng-repeat="nextBlockOfItems in postsArray |limitTo: 1" ng-if="postsArray.length > 18">
+<div ng-repeat="nextBlockOfItems in postsArray | limitTo: 1" ng-if="(postsArray.length / 18) > 1 ">
     <br />
-    <a class="yellow_text right" href="#top">Back to top</a>
+    <!-- <a class="yellow_text right" href="#top">Back to top</a> -->
+    <a class="yellow_text right" onclick="scroll(0,0)">Back to top</a>
     <br />
     <br />
     <div class="row inset_bg"> 
@@ -30,8 +31,8 @@
 
     <!-- holder for images -->
             <!-- Loops over posts array -->
-            <div ng-repeat="item in postsArray | orderBy: '-createdDate' | filter: searchText.search ">
-                <span ng-if="$index > 17">
+            <div ng-repeat="item in postsArray | orderBy: '-createdDate' | filter: searchText.search  ">
+                <span ng-if="($index / 17) > 1">
                     <div class="col-md-2"><a ng-mouseover="item.post"  ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="185" height="186" class="front_page"></a></div>
                 </span>
                 <!-- ng-mouseover="{{item.post}}" -->
