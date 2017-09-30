@@ -7,18 +7,39 @@
     </div>
 </div>
 <!-- main insert on homepage -->
-<div class="row inset_bg"> 
-        <div id="loader"></div>
+        <div class="row inset_bg"> 
+                <!-- <div id="loader"></div> -->
 
-<!-- holder for images -->
-        <!-- Loops over posts array -->
-        <div ng-repeat="item in postsArray | orderBy: '-createdDate' | filter: searchText.search">
-        <div class="col-md-2"><a ng-mouseover="item.post" ng-init="count=0" ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="185" height="186" class="front_page"></a></div>
-          
-        <!-- ng-mouseover="{{item.post}}" -->
+        <!-- holder for images -->
+                <!-- Loops over posts array -->
+                <div ng-repeat="item in postsArray | orderBy: '-createdDate' | filter: searchText.search | limitTo: 18 ">
+                    <div class="col-md-2"><a ng-mouseover="item.post" ng-init="count=0" ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="185" height="186" class="front_page"></a></div>
                     
-        </div>        
+                    <!-- ng-mouseover="{{item.post}}" -->
+                </div>  
+        </div>
+
+<!-- if conditional to test if new card holder is needed on main view -->
+<div ng-repeat="nextBlockOfItems in postsArray |limitTo: 1" ng-if="postsArray.length > 18">
+    <br />
+    <a class="yellow_text right" href="#top">Back to top</a>
+    <br />
+    <br />
+    <div class="row inset_bg"> 
+            <!-- <div id="loader"></div> -->
+
+    <!-- holder for images -->
+            <!-- Loops over posts array -->
+            <div ng-repeat="item in postsArray | orderBy: '-createdDate' | filter: searchText.search ">
+                <span ng-if="$index > 17">
+                    <div class="col-md-2"><a ng-mouseover="item.post"  ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="185" height="186" class="front_page"></a></div>
+                </span>
+                <!-- ng-mouseover="{{item.post}}" -->
+            </div>  
+    </div>
+
 </div>
+<!-- end of next block of images if condition greater than 18 -->
 
 
 
