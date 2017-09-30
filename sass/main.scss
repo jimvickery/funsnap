@@ -48,7 +48,7 @@
   padding-right: 22px;
   padding-top: 18px;
   padding-bottom: 18px;
-  border-radius: 8px;
+  border-radius: 10px;
   min-height: 90px;
 }
 
@@ -88,12 +88,17 @@
 .inset_bg_form {
   background-color: rgba(80, 8, 182, 0.75);
   padding: 22px;
-  border-radius: 8px;
+  border-radius: 11px;
 }
 
 //used for all text to contrast with dark bg
 .white_text {
   color: white;
+}
+
+// form headling and post preview text color
+.yellow_text {
+  color: yellow;
 }
 
 .hide_text {
