@@ -13,8 +13,14 @@
         <!-- holder for images -->
                 <!-- Loops over posts array -->
                 <div ng-repeat="item in postsArray | orderBy: '-createdDate' | filter: searchText.search | limitTo: 18 ">
-                    <div class="col-md-2"><a ng-mouseover="item.post" ng-init="count=0" ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="185" height="186" class="front_page"></a></div>
-                    
+                    <span ng-if="item.imageURL =='' ">
+                         <div class="col-md-2"><a ng-mouseover="item.post" ng-init="count=0" ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL2}}" width="185" height="186" class="front_page"></a></div>
+                    </span>
+
+                    <span ng-if="item.imageURL !='' ">
+                            <div class="col-md-2"><a ng-mouseover="item.post" ng-init="count=0" ng-href="#!/post/{{item.id}}"><img ng-src="{{item.imageURL}}" width="185" height="186" class="front_page"></a></div>
+                       </span>
+
                     <!-- ng-mouseover="{{item.post}}" -->
                 </div>  
         </div>
