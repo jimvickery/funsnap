@@ -13,7 +13,9 @@ app.controller("addPostCtrl", function($scope, postsFactory, $location, userFact
 
 	$scope.post = {
 		createdBy: "Jim",
-		createdDate: $scope.value = new Date().toString().split("T")[0],
+		// createdDate: $scope.value = new Date().toString().split("T")[0],
+		//getst the UTC current time
+		createdDate: $scope.value = Math.floor((new Date()).getTime() / 1000),
 		imageURL: "",
 		imageDetail1: "",
 		imageURL2: "",
