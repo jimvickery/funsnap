@@ -66,16 +66,16 @@
 				<br><br></br>
 
 			<!-- second image url fetch -->
-			<span class=""><img ng-src="{{post.imageURL2}}" width="600">
+			<img ng-src="{{post.imageURL2}}" width="600">
 				<br> <h4 class="white_text">{{post.imageDetail2}}</h4>
 				<br>
-
+			
 
 			<!-- third image url fetch -->
-			<span class=""><img ng-src="{{post.imageURL3}}" width="600">
+			<img ng-src="{{post.imageURL3}}" width="600">
 				<br><h4 class="white_text">{{post.imageDetail3}}</h4>
 				<br>
-
+				
 				<!-- start of social media -->
 				<button> <a class="twitter-share-button"
 				href="https://twitter.com/share"
@@ -88,12 +88,24 @@
 			  Tweet
 			  </a></button>
 
-				<div class="white_text right_align">
-						<a data-pin-do="buttonPin" data-pin-count="above" data-pin-save="true" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=https%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest"></a>
-				</div>
+
+				<!-- <script
+				type="text/javascript"
+				async defer
+				src="//assets.pinterest.com/js/pinit.js">
+				</script>
+
+				<a href="https://www.pinterest.com/pin/create/button/">
+					<img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" />
+				</a> -->
+
+				<a href="http://pinterest.com/pin/create/button/?url={URI-encoded URL of the page to pin}&media={URI-encoded URL of the image to pin}&description={optional URI-encoded description}" class="pin-it-button" count-layout="horizontal">
+					<img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" />
+				</a>
 				<!-- end of social media -->
 
 			</div>
+			
 		<div class="col-sm-4"> 
 			<!-- most popular images -->
 			
