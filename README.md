@@ -1,4 +1,5 @@
 # FunSnap Front End Capstone
+Built with AngularJS, Firebase, Bootstrap, Javascript.
 
 ![Alt text](funsnap.png?raw=true "Title")
 
@@ -23,4 +24,4 @@
 5. Login then start submitting posts with images and messages
 
 
-The site can be seen live at www.sillysnap.com
+The a Ruby on Rails version of this site can be seen live at www.sillysnap.com
