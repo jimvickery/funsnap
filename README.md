@@ -24,4 +24,4 @@ Built with AngularJS, Firebase, Bootstrap, Javascript.
 5. Login then start submitting posts with images and messages
 
 
-The a Ruby on Rails version of this site can be seen live at www.sillysnap.com
+There's a live Ruby on Rails version of this site at www.sillysnap.com. Visit the site and do a search. Or register and add comments or submit your silly humor in a snap. No humor pics or comments to submit? Just register and upvote or downvote a gallery or comment.
