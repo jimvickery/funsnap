@@ -1,6 +1,10 @@
 # FunSnap Front End Capstone
 
-1. Clone Project
+![Alt text](funsnap.png?raw=true "Title")
+
+![Alt text](funsnap3.png?raw=true "Title")
+
+1. Clone the Project
 2. Create FBCreds file with firebase credentials setting the search index to 
 3. CD into lib folder and run npm install
 
