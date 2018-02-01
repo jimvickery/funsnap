@@ -43,3 +43,5 @@ There's a live Ruby on Rails version of this site at www.sillysnap.com. Visit th
 ![Alt text](admin1.png?raw=true "Title")
 
 ![Alt text](admin2.png?raw=true "Title")
+
+Visit the live site at site at www.sillysnap.com to see it in action.
