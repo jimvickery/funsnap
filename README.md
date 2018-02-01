@@ -38,7 +38,7 @@ There's a live Ruby on Rails version of this site at www.sillysnap.com. Visit th
 
 ![Alt text](sillysnap_p2.png?raw=true "Title")
 
-# There's an Administration Area. 
+# Also, there's an Admin Area. 
 
 ![Alt text](admin1.png?raw=true "Title")
 
