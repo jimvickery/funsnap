@@ -37,3 +37,7 @@ There's a live Ruby on Rails version of this site at www.sillysnap.com. Visit th
 ![Alt text](sillysnap_p1.png?raw=true "Title")
 
 ![Alt text](sillysnap_p2.png?raw=true "Title")
+
+![Alt text](admin1.png?raw=true "Title")
+
+![Alt text](admin2.png?raw=true "Title")
