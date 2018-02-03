@@ -1,5 +1,5 @@
 # FunSnap Image Sharing Site (Front End Capstone at Nashville Software School)
-Built with AngularJS, Firebase, Bootstrap, Javascript.
+Built with AngularJS, Firebase, Bootstrap, Javascript, Grunt.
 
 ![Alt text](funsnap.png?raw=true "Title")
 
