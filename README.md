@@ -5,6 +5,8 @@ Built with AngularJS, Firebase, Bootstrap, Javascript.
 
 ![Alt text](funsnap3.png?raw=true "Title")
 
+# Deployment Instructions:
+
 1. Clone the Project
 2. Create FBCreds file with firebase credentials setting the search index to 
 3. CD into lib folder and run npm install
