@@ -1,4 +1,4 @@
-# FunSnap Image SHaring Site (Front End Capstone at Nashville Software School)
+# FunSnap Image Sharing Site (Front End Capstone at Nashville Software School)
 Built with AngularJS, Firebase, Bootstrap, Javascript.
 
 ![Alt text](funsnap.png?raw=true "Title")
