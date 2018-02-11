@@ -1,3 +1,5 @@
+![Alt text](sillysnap_logo.png?raw=true "Title")
+
 # FunSnap Image Sharing Site (Front End Capstone at Nashville Software School)
 Built with AngularJS, Firebase, Bootstrap, Javascript, Grunt.
 
@@ -43,4 +45,5 @@ There's a live Ruby on Rails version of this site at www.sillysnap.com. Visit th
 
 ![Alt text](admin2.png?raw=true "Title")
 
-Visit the live site at site at www.sillysnap.com to see it in action.
+Visit the live site at site at <a href="http://www.sillysnap.com" target="_blank">SillySnap.com</a>
+  to see it in action.
