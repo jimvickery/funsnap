@@ -4,16 +4,19 @@
 ## This is an Image Sharing Site built as the Front End Capstone at Nashville Software School.
 Built with AngularJS, Firebase, Bootstrap, Javascript, Grunt.
 
-## Main page with all images.
+### Main page with all images.
 ![Alt text](funsnap.png?raw=true "Title")
-## Show page of an image and Most Viral Images in Right Column.
+### Show page of a gallery posting with the Most Viral Images in Right Column.
 ![Alt text](funsnap3.png?raw=true "Title")
 
 ====================================================================================
 ## Live Site Preview
 There's a live Ruby on Rails version of this site at www.sillysnap.com. Visit the site and do a search. Or register and add comments or submit your silly humor in a snap. No humor pics or comments to submit? Just register and upvote or downvote a gallery or comment.
 
+### Main page with all images.
+
 ![Alt text](sillysnap_p1.png?raw=true "Title")
+### Show page of a gallery posting wotj tje Most Viral Images in Right Column.
 
 ![Alt text](sillysnap_p2.png?raw=true "Title")
 
