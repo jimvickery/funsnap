@@ -19,7 +19,7 @@ There's a live Ruby on Rails version of this site at www.sillysnap.com. Visit th
 ## Also, there's an Admin Area. 
 ![Alt text](admin1.png?raw=true "Title")
 
-#List of Categories, Comments and Users from Admin with full admin control.
+## List of Categories, Comments and Users from Admin with full admin control.
 ![Alt text](admin2.png?raw=true "Title")
 ====================================================================================
 ## Deployment Instructions:
