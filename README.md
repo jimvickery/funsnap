@@ -4,8 +4,9 @@
 ## This is an Image Sharing Site built as the Front End Capstone at Nashville Software School.
 Built with AngularJS, Firebase, Bootstrap, Javascript, Grunt.
 
+## Main page with all images.
 ![Alt text](funsnap.png?raw=true "Title")
-
+## Show page of an image and Most Viral Images in Right Column.
 ![Alt text](funsnap3.png?raw=true "Title")
 
 ====================================================================================
