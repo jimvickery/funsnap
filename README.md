@@ -21,10 +21,10 @@ There's a live Ruby on Rails version of this site at www.sillysnap.com. Visit th
 ![Alt text](admin2.png?raw=true "Title")
 ====================================================================================
 # Deployment Instructions:
-```
+
 Note: These instructions are for the AngularJS version of the site. The Ruby on Rails version curently is a private Repo UTF.
 <br>
-
+```
 1. Clone the Project 
 ```
 2. Create FBCreds file with firebase credentials setting the search index to 
