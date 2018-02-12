@@ -16,7 +16,7 @@ There's a live Ruby on Rails version of this site at www.sillysnap.com. Visit th
 ### Main page with all images.
 
 ![Alt text](sillysnap_p1.png?raw=true "Title")
-### Show page of a gallery posting wotj tje Most Viral Images in Right Column.
+### Show page of a gallery posting with the Most Viral Images in Right Column.
 
 ![Alt text](sillysnap_p2.png?raw=true "Title")
 
