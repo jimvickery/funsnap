@@ -1,7 +1,8 @@
 ![Alt text](sillysnap_logo3.png?raw=true "Title")
 
 # SillySnap (Also know by its Repo Name as FunSnap) 
-## This is an Image Sharing Site built as the Front End Capstone at Nashville Software School.
+## This is an Image Sharing Site built as the Front End Capstone at Nashville Software School. 
+A live version of this site built with Ruby on Rails can be seen at www.sillysnap.com, (more info below). <br>
 Built with AngularJS, Firebase, Bootstrap, Javascript, Grunt.
 
 ### Main page with all images.
