@@ -1,6 +1,6 @@
 ![Alt text](sillysnap_logo3.png?raw=true "Title")
 
-# SillySnap (AKA FunSnap) 
+# SillySnap (Also know by its Repo Name as FunSnap) 
 ## This is an Image Sharing Site built as the Front End Capstone at Nashville Software School.
 Built with AngularJS, Firebase, Bootstrap, Javascript, Grunt.
 
