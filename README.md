@@ -12,6 +12,8 @@ Built with AngularJS, Firebase, Bootstrap, Javascript, Grunt.
 
 ====================================================================================
 ## Live Site Preview
+====================================================================================
+
 The AngularJS version (this repo) is not live. However, the RoR version of this site is live: www.sillysnap.com. Visit the site and do a search. Or register and add comments or submit your silly humor in a snap. No humor pics or comments to submit? Just register and upvote or downvote a gallery or comment.
 
 ### Main page with all images.
