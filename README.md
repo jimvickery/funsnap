@@ -64,5 +64,5 @@ http://localhost:8080
 7. Register, then start submitting images or comments.
 
 
-Visit the live site at site at <a href="http://www.sillysnap.com" target="_blank">SillySnap.com</a>
+Visit the live site (built with ROR) at <a href="http://www.sillysnap.com" target="_blank">SillySnap.com</a>
 to see it in action.
