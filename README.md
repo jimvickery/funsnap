@@ -64,5 +64,7 @@ http://localhost:8080
 7. Register, then start submitting images or comments.
 
 
-Visit the live site (built with ROR) at <a href="http://www.sillysnap.com" target="_blank">SillySnap.com</a>
+Visit the live site (built with RoR) at <a href="http://www.sillysnap.com" target="_blank">SillySnap.com</a>
 to see it in action.
+
+Note: This Repo is built with AngularJS and does not include an admin area. The admin area is only available in the RoR version which currently is a private repo.
