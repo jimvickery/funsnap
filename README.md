@@ -1,7 +1,7 @@
 ![Alt text](sillysnap_logo3.png?raw=true "Title")
 
 # Funsnap (An Imgur Clone) 
-## This is an Image Sharing Site built as the Front End Capstone at Nashville Software School. 
+## This is an Image Sharing Site built as the Front End Capstone at Nashville Software School. It is similar to the site Imgur. 
 A live version of this site built with Ruby on Rails can be seen at www.sillysnap.com, (more info below). <br>
 Built with AngularJS, Firebase, Bootstrap, Javascript, Grunt.
 
