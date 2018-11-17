@@ -67,4 +67,4 @@ http://localhost:8080
 Visit the live site (built with RoR) at <a href="http://www.sillysnap.com" target="_blank">SillySnap.com</a>
 to see it in action.
 
-Note: This Repo is built with AngularJS and does not include an admin area. The admin area is only available in the RoR version which currently is a private repo.
+Note: This Repo is built with AngularJS and does not include an admin area. The admin area is only available in the RoR version which currently is a private repo.  More will be added to this repo at a later time.
